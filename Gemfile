@@ -25,9 +25,45 @@ gem 'puma', '~> 3.7'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+gem 'active_model_serializers'
+
+gem 'ffaker'
+
+gem 'faker'
+
+gem 'sidekiq'
+
+# OAuth JSON Web Token (JWT)
+gem 'jwt', '1.5.6'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# gem 'jbuilder', '~> 2.5'
+gem 'mini_magick', '4.8.0'
+# Track changes to your models, for auditing or versioning
+gem 'paper_trail', '7.1.3'
+# ActiveRecord plugin allowing you to hide and restore records without actually deleting them.
+gem 'paranoia', '2.4.0'
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors', '1.0.2'
+
+# Ransack is the successor to the MetaSearch
+gem 'ransack', '1.8.6'
+
+gem 'versionist', '1.5.0'
+gem 'whenever', '0.10.0', :require => false
+gem 'will_paginate', '3.1.6'
+gem 'unicorn-rails', '2.2.1'
+
+gem 'carrierwave', '~> 1.0'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
 end
 
 group :development do
@@ -35,6 +71,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'annotate'
+  gem 'awesome_print'
+  gem 'rails-erd', require: false
+  gem 'bullet'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
