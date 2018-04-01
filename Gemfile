@@ -56,6 +56,7 @@ gem 'unicorn-rails', '2.2.1'
 
 gem 'carrierwave', '~> 1.0'
 
+gem 'enumerize'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

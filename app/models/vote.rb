@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  product_id :integer          not null
 #  user_id    :integer          not null
-#  start      :integer
+#  star       :integer
 #  deleted_at :datetime
 #  created_at :datetime
 #  updated_at :datetime

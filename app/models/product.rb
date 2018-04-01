@@ -7,7 +7,7 @@
 #  price       :float
 #  avatar      :text
 #  description :text
-#  start       :integer
+#  star        :integer
 #  category_id :integer          not null
 #  deleted_at  :datetime
 #  created_at  :datetime
