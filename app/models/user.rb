@@ -46,9 +46,9 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, on: %i[create update],
                                     unless: :skip_password_validation
   validates :email, uniqueness: { scope: :deleted_at }
-  validates_confirmation_of :password
-  validates_format_of :email, with: /\w+@\w+\.{1}[a-zA-Z]{2,}/
-  validates_format_of :phone, with: /(09+([0-9]{8})|01+([0-9]{9}))/
+  validates :password, confirmation: true
+  validates :email, format: { with: /\w+@\w+\.{1}[a-zA-Z]{2,}/ }
+  validates :phone, format: { with: /(09+([0-9]{8})|01+([0-9]{9}))/ }
 
   # ==============Attr-Accessor===============
   attr_accessor :skip_password_validation
