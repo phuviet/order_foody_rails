@@ -52,4 +52,16 @@ class User < ApplicationRecord
 
   # ==============Attr-Accessor===============
   attr_accessor :skip_password_validation
+
+  # format name of user follow company format name (example: Huy Dinh Q.)
+  def format_fullname
+    mid_name = ''
+    if middle_name.present?
+      mid_name = middle_name.split(/[\s,　]/)
+      mid_name = mid_name.map { |c| "#{c[0]}." if c.present? }
+      mid_name = mid_name.join.upcase
+    end
+    fullname = "#{first_name} #{last_name} #{mid_name}"
+    fullname.squish.to_ascii
+  end
 end

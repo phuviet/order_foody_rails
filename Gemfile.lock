@@ -224,6 +224,7 @@ GEM
     unicorn-rails (2.2.1)
       rack
       unicorn
+    unidecoder (1.1.2)
     uniform_notifier (1.11.0)
     versionist (1.5.0)
       activesupport (>= 3)
@@ -270,6 +271,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
   unicorn-rails (= 2.2.1)
+  unidecoder (= 1.1.2)
   versionist (= 1.5.0)
   whenever (= 0.10.0)
   will_paginate (= 3.1.6)

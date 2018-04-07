@@ -30,4 +30,117 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activemodel:
+    errors:
+      messages:
+        inclusion: does_not_include
+  app:
+    update_success: "%{subject} has been updated"
+    # can_not_blank: "can_not_blank"
+    abstract_method_must_be_implemented: abstract_method_must_be_implemented
+  attachments:
+    limit_size: limit_size
+    # does_not_exists: 'The attachment does not exist'
+    allowed_extensions: can_not_allow_extensions
+  models:
+    exists: already_exists
+    does_not_exists: does_not_exists
+    can_not_blank: can_not_blank
+    do_not_duplicate: do_not_duplicate
+  # params:
+    # is_not_a_date: 'is_not_a_date' -> invalid_date
+  recursive:
+    root_at_least_one: at_least_one_root
+    must_be_root: root_without_parent
+    no_paternity_with_itself: no_paternity_with_itself
+  status:
+    must:
+      saved: must_be_saved
+      pending: must_be_pending
+      waiting: must_be_waiting
+      inprogress: must_be_inprogress
+      completed: must_be_completed
+      reviewed: must_be_reviewed
+      done: must_be_done
+      rejected: must_be_rejected
+      approval: must_be_approval
+  invalid:
+    result: invalid_result
+    status: invalid_status
+    url: invalid_url
+    date: invalid_date
+    foreign_key: invalid_foreign_key
+    json: invalid_json
+    email: invalid_email
+    access_token: invalid_access_token
+    integer: invalid_integer
+    boolean: invalid_boolean
+    float: invalid_float
+    hash: invalid_hash
+    array: invalid_array
+  token:
+    expired: expired_access_token
+  errors:
+    delete_success: delete_success
+    delete_failure: delete_failure
+    update_failure: update_failure
+    # can_not_empty: "Can't empty" -> can_not_blank
+    record_not_found: 'Record not found'
+    request_not_found: 'The requested URL was not found on this server'
+    internal_server_error: internal_server_error
+    must_be_uniq: must_be_uniq
+    # does_not_exists: '%{value} does not exists'
+    does_not_include: does_not_include
+    already_exists_in_time: already_exists_in_time
+    must_be_in_duration: must_be_in_duration
+    on_or_after_date_joined_company: on_or_after_date_joined_company
+    on_or_after_launch_date: on_or_after_launch_date
+    on_or_after_start_date: on_or_after_start_date
+    after_end_date: after_end_date
+    conflict_holiday: conflict_holiday
+    special_day: special_day
+    date_is_not_assigned: date_is_not_assigned
+    conflict_role: conflict_role
+    wrong_object: wrong_object
+    messages:
+      blank: can_not_blank
+      carrierwave_processing_error: failed to be processed
+      carrierwave_integrity_error: is not of an allowed file type
+      carrierwave_download_error: could not be downloaded
+      extension_whitelist_error: "You are not allowed to upload %{extension} files,
+                                 allowed types: %{allowed_types}"
+      extension_blacklist_error: "You are not allowed to upload %{extension} files,
+                                  prohibited types: %{prohibited_types}"
+      too_long:
+        other: too_long
+      too_short:
+        other: too_short
+      not_a_number: invalid_number
+      not_an_integer: invalid_integer
+      greater_than: greater_than
+      greater_than_or_equal_to: greater_than_or_equal_to
+      less_than: less_than
+      less_than_or_equal_to: less_than_or_equal_to
+      invalid_date: invalid_date
+  authorized:
+    login_failure: login_failure
+    logout_failure: logout_failure
+    logout_success: logout_success
+    unauthorized: unauthorized
+  # positions:
+  #   invalid_parent: "Parent id doesn't exists in this level"
+  # articles:
+  #   parent_first: "must create the root article first"
+  #   wrong_parent: "Failed to update. Current article include the article from your select"
+  # leaves:
+  #   my_leaves:
+  #     not_manager: "You are not a team manager of this user."
+  #     leave_exist: "Has already been taken"
+  #     not_enough_leave_date: "You do not have enough leave date"
+  #   reviews:
+  #     has_been_reviewed: "This day has been reviewed"
+  #     wrong_leave_form: "You can't review this leave"
+  # team_group:
+  #   user:
+  #     invalid_params_user_id: "User id can't not blank"
+  #     exists: 'User already exists in this %{subject}'
