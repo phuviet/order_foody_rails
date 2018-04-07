@@ -35,6 +35,11 @@ class Product < ApplicationRecord
   validates :name, uniqueness: { scope: :deleted_at }
 
   scope :common_order, -> { order(:name) }
+  scope :top_newest, -> { order(created_at: :desc).limit(SystemConfig.top_newest.value) }
+  scope :top_seller, -> {
+    joins(:order_items).group('products.id').order('SUM(order_items.quantity) DESC')
+                       .limit(SystemConfig.top_newest.value)
+  }
   scope :includes_details, -> {
     includes(:category, :products_images, :votes, parent_comments: [:user, child_comments: :user])
   }
