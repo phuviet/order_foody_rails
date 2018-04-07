@@ -32,4 +32,6 @@ class Product < ApplicationRecord
   validates :category_id, presence: true
   validates :name, presence: true
   validates :name, uniqueness: { scope: :deleted_at }
+
+  scope :common_order, -> { order(:name) }
 end
