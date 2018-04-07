@@ -37,5 +37,8 @@ module OrderFoodyRails
         environment.each { |key, value| ENV[key.to_s] = value }
       end
     end
+
+    config.autoload_paths << Rails.root.join("app", "operations")
+    config.autoload_paths << Rails.root.join("app", "errors")
   end
 end
