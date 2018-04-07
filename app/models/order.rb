@@ -26,5 +26,5 @@ class Order < ApplicationRecord
 
   # ================Validates=====================
   validates :user_id, :receiver, :address, :phone, presence: true
-  validates_format_of :phone, with: /(09+([0-9]{8})|01+([0-9]{9}))/
+  validates :phone, format: { with: /(09+([0-9]{8})|01+([0-9]{9}))/ }
 end

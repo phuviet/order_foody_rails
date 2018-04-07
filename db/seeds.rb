@@ -11,58 +11,58 @@ avatar_mod = 'mod.jpg'
 avatar_member = 'member.jpg'
 avatar_guest = 'guest.jpg'
 
-images =[
-  "a1z4vctf5zzq52d0klvk.png",
-  "acjrxjgswsazata03d5h.png",
-  "b4iueimyqmiytnz0hn2g.png",
-  "c0zrcginl3xtldd9wao6.png",
-  "d9icptgtxskiptkflq1m.png",
-  "dhtqduhwgtslqcacft2c.png",
-  "dtcjxmk6w4h5hhok13qi.png",
-  "e0w3xyhbfxglgh5qxnhl.png",
-  "ecx8oobrablr28ltn1xn.png",
-  "efwx2ba7efmvdcmirwwl.png",
-  "eitfvzsglbto0xnawhhf.png",
-  "ejn1mmhkdzyb9yiikwzo.png",
-  "fc67gmkj0vd74dpqxgnk.png",
-  "hrkizwpvxoualxswlhet.png",
-  "i3igdbmng0dpifxh0wjb.png",
-  "ijh03rcmvesuxwpsjubj.png",
-  "itmf4gvii7y3bfscogif.png",
-  "iwnte6lvtrh93pt0kdsb.png",
-  "j3azz686roeufq7rleis.png",
-  "jfdhxoc5wokoepu2yx8o.png",
-  "jifcna44ktrjsltuovpn.png",
-  "jkojbhs49y0sj9skdlm9.png",
-  "jz3optyrqowo9ylv3zfi.png",
-  "m7lqhjqecpmhkpb7nlpt.png",
-  "msvgh4j2ggiknab3o1ga.png",
-  "p1cpzimnqlwpwdlm7jkq.png",
-  "p8ipzgm9znuxqnsxi7uz.png",
-  "pgpyfsoy4vvaiskqdt5f.png",
-  "q43nsa6erlp7sym2j4dz.png",
-  "qdzze1nlnq3hzv8sfcip.png",
-  "qfyof6gcyfw0cobumsy4.png",
-  "qkqrqco7up9vb1r16dt9.png",
-  "qmw8ncltud16mlkz57dr.png",
-  "qwtdg7jqylxjjeewpdyw.png",
-  "r03esjlxwgcocvfpyqsd.png",
-  "sfsowcssisv4pizfdxuh.png",
-  "t8ikrqmurrnavm5juyrj.png",
-  "taf8ijl9kdrxaaitivrf.png",
-  "taudyfoqyy2dzrugjxmk.png",
-  "txfta57hxvmgaglubrxd.png",
-  "uan9i2ljwxmljc6fi85z.png",
-  "ubosfmip9ntllarau8jj.png",
-  "ucke1gntdlkxzmxpzox3.png",
-  "ur0ycy4gvcnqjah0fxnk.png",
-  "vf8ruakmxwiyv4ok0gwq.png",
-  "x1yogjdnqqlpdfzft4xs.png",
-  "xcukno93z0ogrkshoypk.png",
-  "xh0g6fttcafwsalba1qp.png",
-  "yvgidu0qqohp6ftpvpvr.png",
-  "yy37gw5hvfpdcyjjakvw.png",
-  "yyyqqrmrh1bszk0duwwl.png"
+images = [
+  'a1z4vctf5zzq52d0klvk.png',
+  'acjrxjgswsazata03d5h.png',
+  'b4iueimyqmiytnz0hn2g.png',
+  'c0zrcginl3xtldd9wao6.png',
+  'd9icptgtxskiptkflq1m.png',
+  'dhtqduhwgtslqcacft2c.png',
+  'dtcjxmk6w4h5hhok13qi.png',
+  'e0w3xyhbfxglgh5qxnhl.png',
+  'ecx8oobrablr28ltn1xn.png',
+  'efwx2ba7efmvdcmirwwl.png',
+  'eitfvzsglbto0xnawhhf.png',
+  'ejn1mmhkdzyb9yiikwzo.png',
+  'fc67gmkj0vd74dpqxgnk.png',
+  'hrkizwpvxoualxswlhet.png',
+  'i3igdbmng0dpifxh0wjb.png',
+  'ijh03rcmvesuxwpsjubj.png',
+  'itmf4gvii7y3bfscogif.png',
+  'iwnte6lvtrh93pt0kdsb.png',
+  'j3azz686roeufq7rleis.png',
+  'jfdhxoc5wokoepu2yx8o.png',
+  'jifcna44ktrjsltuovpn.png',
+  'jkojbhs49y0sj9skdlm9.png',
+  'jz3optyrqowo9ylv3zfi.png',
+  'm7lqhjqecpmhkpb7nlpt.png',
+  'msvgh4j2ggiknab3o1ga.png',
+  'p1cpzimnqlwpwdlm7jkq.png',
+  'p8ipzgm9znuxqnsxi7uz.png',
+  'pgpyfsoy4vvaiskqdt5f.png',
+  'q43nsa6erlp7sym2j4dz.png',
+  'qdzze1nlnq3hzv8sfcip.png',
+  'qfyof6gcyfw0cobumsy4.png',
+  'qkqrqco7up9vb1r16dt9.png',
+  'qmw8ncltud16mlkz57dr.png',
+  'qwtdg7jqylxjjeewpdyw.png',
+  'r03esjlxwgcocvfpyqsd.png',
+  'sfsowcssisv4pizfdxuh.png',
+  't8ikrqmurrnavm5juyrj.png',
+  'taf8ijl9kdrxaaitivrf.png',
+  'taudyfoqyy2dzrugjxmk.png',
+  'txfta57hxvmgaglubrxd.png',
+  'uan9i2ljwxmljc6fi85z.png',
+  'ubosfmip9ntllarau8jj.png',
+  'ucke1gntdlkxzmxpzox3.png',
+  'ur0ycy4gvcnqjah0fxnk.png',
+  'vf8ruakmxwiyv4ok0gwq.png',
+  'x1yogjdnqqlpdfzft4xs.png',
+  'xcukno93z0ogrkshoypk.png',
+  'xh0g6fttcafwsalba1qp.png',
+  'yvgidu0qqohp6ftpvpvr.png',
+  'yy37gw5hvfpdcyjjakvw.png',
+  'yyyqqrmrh1bszk0duwwl.png'
 ]
 
 status = %w[saved ordered paid shipped completed declined]
@@ -83,9 +83,9 @@ STDOUT.puts '----------------------------------------------------'
 
 # Create! users
 STDOUT.puts 'Create! users'
-admin_id = Role.find_by_name('Admin').id
-mod_id = Role.find_by_name('Mod').id
-member_id = Role.find_by_name('Member').id
+admin_id = Role.find_by(name: 'Admin').id
+mod_id = Role.find_by(name: 'Mod').id
+member_id = Role.find_by(name: 'Member').id
 # ----Admin----
 STDOUT.puts 'User'
 User.create!(
@@ -184,7 +184,7 @@ STDOUT.puts 'Create! products'
   STDOUT.puts 'products'
   Product.create!(
     name: Faker::Commerce.unique.product_name,
-    price: rand(100000..5000000),
+    price: rand(100000..5_000_000),
     description: FFaker::Lorem.paragraphs,
     category_id: Category.all.ids[rand(Category.count)],
     star: rand(1..5),
