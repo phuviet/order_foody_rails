@@ -16,8 +16,8 @@ class Vote < ApplicationRecord
   acts_as_paranoid
 
   # ================Association=====================
-  has_one :user
-  has_one :product
+  belongs_to :user
+  belongs_to :product
 
   # ================Validates=====================
   validates :user_id, :product_id, :star, presence: true

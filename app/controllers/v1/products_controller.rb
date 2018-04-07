@@ -4,4 +4,9 @@ class V1::ProductsController < V1::BaseController
     render json: products, meta: MetaSerializer.new(products), adapter: :json,
            each_serializer: Products::IndexSerializer
   end
+
+  def show
+    render json: ProductOperations::Show.new(params).call,
+           serializer: Products::ShowSerializer
+  end
 end
