@@ -1,5 +1,5 @@
 class CategoryOperations::Index < ApplicationOperation
   def call
-    Category.all
+    Category.common_order
   end
 end

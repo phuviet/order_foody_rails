@@ -1,3 +1,2 @@
-class Categories::IndexSerializer < ActiveModel::Serializer
-  attributes :id, :name
+class Categories::IndexSerializer < Categories::AttributesSerializer
 end
