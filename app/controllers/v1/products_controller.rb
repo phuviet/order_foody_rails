@@ -7,6 +7,6 @@ class V1::ProductsController < V1::BaseController
 
   def show
     render json: ProductOperations::Show.new(params).call,
-           serializer: Products::ShowSerializer
+           serializer: ::Products::ShowSerializer
   end
 end
