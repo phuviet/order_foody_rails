@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180407145934) do
+ActiveRecord::Schema.define(version: 20180409171048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "api_keys", force: :cascade do |t|
+    t.string "access_token", null: false
+    t.integer "user_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["access_token", "user_id"], name: "index_api_keys_on_access_token_and_user_id", unique: true, where: "(deleted_at IS NULL)"
+    t.index ["user_id"], name: "index_api_keys_on_user_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -58,6 +68,24 @@ ActiveRecord::Schema.define(version: 20180407145934) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "product_watcheds", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_watcheds_on_product_id"
+    t.index ["user_id"], name: "index_product_watcheds_on_user_id"
+  end
+
+  create_table "product_watchers", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["product_id"], name: "index_product_watchers_on_product_id"
+    t.index ["user_id"], name: "index_product_watchers_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -155,6 +183,10 @@ ActiveRecord::Schema.define(version: 20180407145934) do
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "users"
+  add_foreign_key "product_watcheds", "products"
+  add_foreign_key "product_watcheds", "users"
+  add_foreign_key "product_watchers", "products"
+  add_foreign_key "product_watchers", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "products_images", "products"
   add_foreign_key "users", "roles"

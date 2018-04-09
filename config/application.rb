@@ -38,6 +38,7 @@ module OrderFoodyRails
       end
     end
 
+    config.autoload_paths << Rails.root.join("app", "services")
     config.autoload_paths << Rails.root.join("app", "operations")
     config.autoload_paths << Rails.root.join("app", "errors")
   end
