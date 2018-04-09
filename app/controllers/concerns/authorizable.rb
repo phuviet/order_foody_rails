@@ -20,9 +20,7 @@ module Authorizable
   private
 
     def verify_token!
-      unless valid_token?
-        raise UnauthorizedError, authorization: I18n.t('authorized.unauthorized')
-      end
+      raise UnauthorizedError, authorization: I18n.t('authorized.unauthorized') unless valid_token?
     end
 
     def verify_api_key!

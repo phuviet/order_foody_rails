@@ -1,9 +1,9 @@
 class ApplicationOperation
-  attr_accessor :params, :user
+  attr_accessor :params, :actor
 
   def initialize(params, actor = nil)
     @params = params
-    @user   = user
+    @actor  = actor
   end
 
   def call; end

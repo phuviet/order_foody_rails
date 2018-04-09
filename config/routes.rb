@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   api_version(module: 'V1', path: { value: 'v1' }) do
+    resources :auths, only: :create
+    resource :auths, only: :destroy
     resources :shop_detail, only: :index
     resources :categories, only: :index do
       resources :products, only: :index, controller: 'categories/products'

@@ -73,19 +73,11 @@ ActiveRecord::Schema.define(version: 20180409171048) do
   create_table "product_watcheds", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "product_id", null: false
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_product_watcheds_on_product_id"
     t.index ["user_id"], name: "index_product_watcheds_on_user_id"
-  end
-
-  create_table "product_watchers", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "product_id", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["product_id"], name: "index_product_watchers_on_product_id"
-    t.index ["user_id"], name: "index_product_watchers_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -137,7 +129,7 @@ ActiveRecord::Schema.define(version: 20180409171048) do
     t.string "password_digest"
     t.string "first_name"
     t.string "last_name"
-    t.integer "middle_name"
+    t.string "middle_name"
     t.string "phone"
     t.text "address"
     t.integer "gender"
@@ -185,8 +177,6 @@ ActiveRecord::Schema.define(version: 20180409171048) do
   add_foreign_key "orders", "users"
   add_foreign_key "product_watcheds", "products"
   add_foreign_key "product_watcheds", "users"
-  add_foreign_key "product_watchers", "products"
-  add_foreign_key "product_watchers", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "products_images", "products"
   add_foreign_key "users", "roles"

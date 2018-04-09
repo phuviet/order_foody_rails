@@ -20,6 +20,10 @@ class SystemConfig < ApplicationRecord
     def top_sellers
       SystemConfig.find_by!(name: 'top_sellers')
     end
+
+    def expire_token
+      SystemConfig.find_by!(name: 'expire_token')
+    end
   end
 
   private
