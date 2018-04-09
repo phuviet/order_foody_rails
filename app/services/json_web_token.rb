@@ -15,7 +15,7 @@ class JsonWebToken
     private
 
       def expire_token(exp = Time.zone.now)
-        (exp + ATCache.get(:expire_token).minutes).to_i
+        exp + SystemConfig.expire_token.value.minutes.to_i
       end
   end
 end

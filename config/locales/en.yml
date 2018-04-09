@@ -47,23 +47,6 @@ en:
     does_not_exists: does_not_exists
     can_not_blank: can_not_blank
     do_not_duplicate: do_not_duplicate
-  # params:
-    # is_not_a_date: 'is_not_a_date' -> invalid_date
-  recursive:
-    root_at_least_one: at_least_one_root
-    must_be_root: root_without_parent
-    no_paternity_with_itself: no_paternity_with_itself
-  status:
-    must:
-      saved: must_be_saved
-      pending: must_be_pending
-      waiting: must_be_waiting
-      inprogress: must_be_inprogress
-      completed: must_be_completed
-      reviewed: must_be_reviewed
-      done: must_be_done
-      rejected: must_be_rejected
-      approval: must_be_approval
   invalid:
     result: invalid_result
     status: invalid_status
