@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       collection do
         resources :newest, only: :index, controller: 'products/newest'
         resources :sellers, only: :index, controller: 'products/sellers'
+        resources :watched, only: :index, controller: 'products/watched'
       end
     end
   end
