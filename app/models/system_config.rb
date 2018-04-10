@@ -1,6 +1,9 @@
 class SystemConfig < ApplicationRecord
-  TOP_NEWS    = 10
-  TOP_SELLERS = 10
+  TOP_NEWS       = 10
+  TOP_SELLERS    = 10
+  POINTER_NEW    = 5
+  POINTER_SELLER = 5
+  MAX_CATEGORY   = 3
 
   def value
     original_value = super
@@ -19,6 +22,18 @@ class SystemConfig < ApplicationRecord
 
     def top_sellers
       SystemConfig.find_by!(name: 'top_sellers')
+    end
+
+    def pointer_new
+      SystemConfig.find_by!(name: 'pointer_new')
+    end
+
+    def pointer_seller
+      SystemConfig.find_by!(name: 'pointer_seller')
+    end
+
+    def max_category
+      SystemConfig.find_by!(name: 'max_category')
     end
 
     def expire_token

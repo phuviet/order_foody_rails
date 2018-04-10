@@ -11,6 +11,7 @@ Rails.application.routes.draw do
         resources :newest, only: :index, controller: 'products/newest'
         resources :sellers, only: :index, controller: 'products/sellers'
         resources :watched, only: :index, controller: 'products/watched'
+        resources :pointer, only: :index, controller: 'products/pointer'
       end
     end
   end
