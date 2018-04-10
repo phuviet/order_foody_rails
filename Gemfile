@@ -61,6 +61,8 @@ gem 'enumerize'
 # This library provides methods to transliterate Unicode characters to an ASCII approximation.
 gem 'unidecoder', '1.1.2'
 
+gem 'i18n', '0.9.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
