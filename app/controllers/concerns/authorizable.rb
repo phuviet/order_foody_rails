@@ -2,7 +2,8 @@ module Authorizable
   extend ActiveSupport::Concern
 
   def authentication!(valid = true)
-    return unless valid
+    @valid = valid
+    return if !@valid && http_token.nil?
     verify_token!
     verify_api_key!
     verify_actor!
@@ -10,6 +11,7 @@ module Authorizable
   end
 
   def actor
+    return if !@valid && http_token.nil?
     @actor ||= api_key.user
   end
 
@@ -28,7 +30,7 @@ module Authorizable
     end
 
     def verify_actor!
-      raise UnauthorizedError, I18n.t(:unauthorized) unless actor
+      raise UnauthorizedError, I18n.t('authorized.unauthorized') unless actor
     end
 
     def auth_token
