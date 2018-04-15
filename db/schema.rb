@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 20180409171048) do
     t.float "price"
     t.text "avatar"
     t.text "description"
-    t.integer "star"
+    t.float "star"
     t.bigint "category_id", null: false
     t.datetime "deleted_at"
     t.datetime "created_at"
@@ -161,7 +161,7 @@ ActiveRecord::Schema.define(version: 20180409171048) do
   create_table "votes", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "user_id", null: false
-    t.integer "star"
+    t.float "star"
     t.text "description"
     t.datetime "deleted_at"
     t.datetime "created_at"
