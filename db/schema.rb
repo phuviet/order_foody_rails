@@ -162,6 +162,7 @@ ActiveRecord::Schema.define(version: 20180409171048) do
     t.bigint "product_id", null: false
     t.bigint "user_id", null: false
     t.integer "star"
+    t.text "description"
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"

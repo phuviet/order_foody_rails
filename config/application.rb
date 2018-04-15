@@ -41,6 +41,7 @@ module OrderFoodyRails
     config.autoload_paths << Rails.root.join("app", "services")
     config.autoload_paths << Rails.root.join("app", "operations")
     config.autoload_paths << Rails.root.join("app", "errors")
+    config.autoload_paths << Rails.root.join("app", "validators")
 
     config.api_only = true
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**','*.{rb,yml}').to_s]
