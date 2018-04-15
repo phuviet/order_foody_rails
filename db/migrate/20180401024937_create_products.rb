@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.float :price
       t.text :avatar
       t.text :description
-      t.integer :star
+      t.float :star
       t.references :category, index: true, foreign_key: true, null: false
       t.datetime :deleted_at
 

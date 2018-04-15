@@ -4,10 +4,11 @@ class CommentOperations::Create < ApplicationOperation
   include Users::Finder
   include Products::Finder
 
-  attr_accessor :product, :parent_comment
+  attr_accessor :product_id
 
   def initialize(params, actor)
     super
+    @product_id = params[:product_id]
   end
 
   def call
@@ -15,6 +16,7 @@ class CommentOperations::Create < ApplicationOperation
     comment.valid!
     # comment.tap(&:save)
     comment.save!
-    Comment.includes(:user, child_comments: :user).where(parent_id: nil).common_order
+    Comment.includes(:user, child_comments: :user).where(parent_id: nil, product_id: product_id)
+           .common_order
   end
 end

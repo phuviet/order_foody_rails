@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   api_version(module: 'V1', path: { value: 'v1' }) do
-    resources :comments
+    resources :votes, only: :create
+    resources :comments, only: :create
     resources :auths, only: :create
     resource :auths, only: :destroy
     resources :shop_detail, only: :index

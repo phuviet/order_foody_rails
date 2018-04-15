@@ -105,6 +105,7 @@ en:
       less_than: less_than
       less_than_or_equal_to: less_than_or_equal_to
       invalid_date: invalid_date
+      taken: has_been_taken
   authorized:
     login_failure: login_failure
     logout_failure: logout_failure

@@ -20,5 +20,9 @@ class Vote < ApplicationRecord
   belongs_to :product
 
   # ================Validates=====================
-  validates :user_id, :product_id, :star, presence: true
+  validates :product_id, :star, presence: true
+  validates :product_id, existence: true
+  validates :star, uniqueness: { scope: %i[deleted_at product_id user_id] }
+
+  scope :common_order, -> { order(created_at: :desc) }
 end
