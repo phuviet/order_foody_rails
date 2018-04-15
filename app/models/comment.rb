@@ -24,5 +24,9 @@ class Comment < ApplicationRecord
   belongs_to :parent_comment, class_name: Comment.name, foreign_key: :parent_id, optional: true
 
   # ================Validates=====================
-  validates :user_id, :product_id, :context, presence: true
+  validates :product_id, :context, presence: true
+  validates :product_id, existence: true
+  validates :parent_id, existence: Comment.name, if: -> { parent_id.present? }
+
+  scope :common_order, -> { order(created_at: :desc) }
 end

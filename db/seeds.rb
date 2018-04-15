@@ -211,7 +211,8 @@ STDOUT.puts 'Create! votes'
   Vote.create!(
     product_id: Product.all.ids[rand(Product.count)],
     user_id: User.all.ids[rand(User.count)],
-    star: rand(1..5)
+    star: rand(1..5),
+    description: FFaker::Lorem.paragraphs
   )
 end
 STDOUT.puts '----------------------------------------------------'

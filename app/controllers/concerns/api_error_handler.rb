@@ -19,7 +19,7 @@ module APIErrorHandler
     end
 
     rescue_from ActiveRecord::RecordInvalid do |e|
-      error_response(e.message, :invalid)
+      error_response(e.message, :bad_request)
     end
 
     rescue_from NotImplementedError do |e|
