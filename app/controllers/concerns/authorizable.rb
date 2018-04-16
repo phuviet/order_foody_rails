@@ -12,6 +12,7 @@ module Authorizable
 
   def actor
     return if !@valid && http_token.nil?
+    return if api_key.nil? && !@valid
     @actor ||= api_key.user
   end
 
