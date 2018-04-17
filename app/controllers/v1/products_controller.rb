@@ -4,7 +4,7 @@ class V1::ProductsController < V1::BaseController
   def index
     products = ProductOperations::Index.new(params, actor).call
     render json: products, meta: MetaSerializer.new(products), adapter: :json,
-           each_serializer: Products::IndexSerializer
+           each_serializer: ::Products::IndexSerializer
   end
 
   def show

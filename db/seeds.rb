@@ -208,7 +208,7 @@ STDOUT.puts '----------------------------------------------------'
 STDOUT.puts 'Create! votes'
 300.times do |i|
   STDOUT.puts 'votes'
-  Vote.create!(
+  Vote.create(
     product_id: Product.all.ids[rand(Product.count)],
     user_id: User.all.ids[rand(User.count)],
     star: rand(1..5),
