@@ -249,7 +249,7 @@ STDOUT.puts 'Create! orders and orders items'
     receiver: Faker::Name.name_with_middle,
     address: FFaker::Address.street_address,
     phone: '01203124342',
-    status: status[rand(0..5)],
+    status: status[rand(0..4)],
     user_id: User.all.ids[rand(User.count)]
   )
   5.times do |j|

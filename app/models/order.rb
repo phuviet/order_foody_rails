@@ -22,7 +22,7 @@ class Order < ApplicationRecord
   has_many :order_items, dependent: :destroy
 
   # ================ENUMS=====================
-  enum status: %w[saved ordered paid shipped completed declined]
+  enum status: %w[ordered paid shipped completed declined]
 
   # ================Validates=====================
   validates :user_id, :receiver, :address, :phone, presence: true
