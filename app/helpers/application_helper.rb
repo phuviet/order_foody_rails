@@ -14,4 +14,10 @@ module ApplicationHelper
   rescue StandardError
     nil
   end
+
+  def date?(date)
+    true if date.to_date
+  rescue
+    false
+  end
 end
