@@ -18,7 +18,7 @@ class Order < ApplicationRecord
   acts_as_paranoid
 
   # ================Association=====================
-  has_one :user
+  belongs_to :user
   has_many :order_items, dependent: :destroy
 
   # ================ENUMS=====================
