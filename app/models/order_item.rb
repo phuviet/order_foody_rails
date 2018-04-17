@@ -17,8 +17,8 @@ class OrderItem < ApplicationRecord
   acts_as_paranoid
 
   # ================Association=====================
-  has_one :order
-  has_one :product
+  belongs_to :order
+  belongs_to :product
 
   # ================Validates=====================
   validates :order_id, :product_id, :quantity, :total_price, presence: true
