@@ -3,7 +3,7 @@ module Authorizable
 
   def authentication!(valid = true)
     @valid = valid
-    return if !@valid && http_token.nil?
+    return if !@valid && http_token.blank?
     verify_token!
     verify_api_key!
     verify_actor!
@@ -11,7 +11,7 @@ module Authorizable
   end
 
   def actor
-    return if !@valid && http_token.nil?
+    return if !@valid && http_token.blank?
     return if api_key.nil? && !@valid
     @actor ||= api_key.user
   end

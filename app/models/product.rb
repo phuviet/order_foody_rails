@@ -38,7 +38,7 @@ class Product < ApplicationRecord
   scope :top_newest, -> { order(created_at: :desc).limit(SystemConfig.top_newest.value) }
   scope :top_seller, -> {
     joins(:order_items).group('products.id').order('SUM(order_items.quantity) DESC')
-                       .limit(SystemConfig.top_newest.value)
+                       .limit(SystemConfig.top_sellers .value)
   }
   scope :includes_details, -> {
     includes(:category, :products_images, :votes, parent_comments: [:user, child_comments: :user])
