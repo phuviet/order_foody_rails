@@ -15,6 +15,10 @@ class SystemConfig < ApplicationRecord
     super || 'string'
   end
 
+  def date?
+    data_type.casecmp('date').zero?
+  end
+
   class << self
     def top_newest
       SystemConfig.find_by!(name: 'top_newest')
