@@ -3,7 +3,7 @@ module Authorizable
 
   def authentication!(valid = true)
     @valid = valid
-    return if !@valid && http_token.blank?
+    return if !@valid && (http_token.blank? || http_token_data)
     verify_token!
     verify_api_key!
     verify_actor!
@@ -35,6 +35,7 @@ module Authorizable
     end
 
     def auth_token
+      raise UnauthorizedError, authorization: I18n.t('authorized.unauthorized') if http_token_data
       @auth_token ||= JsonWebToken.decode(http_token)
     end
 
@@ -44,5 +45,9 @@ module Authorizable
 
     def valid_token?
       http_token && auth_token
+    end
+
+    def http_token_data
+      http_token == 'null' || http_token == 'undefined'
     end
 end
