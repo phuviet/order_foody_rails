@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   api_version(module: 'V1', path: { value: 'v1' }) do
+    resources :profile, only: %i[index update] do
+      resource :password, only: :update, controller: 'profile/password'
+    end
     resources :orders, only: %i[create index show]
     resources :system_config, only: :index
     resources :votes, only: :create
