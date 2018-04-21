@@ -17,7 +17,7 @@ module ApplicationHelper
 
   def date?(date)
     true if date.to_date
-  rescue
+  rescue StandardError
     false
   end
 end
