@@ -5,4 +5,9 @@ class V1::ProfileController < V1::BaseController
     render json: ProfileOperations::Index.new(params, actor).call,
            serializer: ::Profiles::IndexSerializer
   end
+
+  def update
+    render json: ProfileOperations::Update.new(params, actor).call,
+           serializer: ::Profiles::IndexSerializer
+  end
 end

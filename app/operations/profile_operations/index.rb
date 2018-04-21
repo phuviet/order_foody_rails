@@ -1,9 +1,7 @@
 class ProfileOperations::Index < ApplicationOperation
+  include Users::Finder
+
   def call
-    user = User.find(actor.id)
-    {
-      user: user,
-      orders: user.orders
-    }
+    load_user!(actor.id)
   end
 end

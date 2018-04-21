@@ -51,6 +51,8 @@ class User < ApplicationRecord
   validates :password, confirmation: true
   validates :email, format: { with: /\w+@\w+\.{1}[a-zA-Z]{2,}/ }
   validates :phone, format: { with: /(09+([0-9]{8})|01+([0-9]{9}))/ }
+  validates_date :birthday, before: -> { 18.years.ago },
+                            before_message: I18n.t('user.must_be_greater_than_18')
 
   # ==============Attr-Accessor===============
   attr_accessor :skip_password_validation

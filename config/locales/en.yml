@@ -86,6 +86,9 @@ en:
     conflict_role: conflict_role
     wrong_object: wrong_object
     messages:
+      invalid_date: invalid_date
+      invalid_time: invalid_time
+      invalid_datetime: invalid_datetime
       blank: can_not_blank
       carrierwave_processing_error: failed to be processed
       carrierwave_integrity_error: is not of an allowed file type
