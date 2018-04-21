@@ -35,8 +35,10 @@ class User < ApplicationRecord
   # ================Association=====================
   has_many :comments, dependent: :destroy
   has_many :orders, dependent: :destroy
-  has_one :role
   has_many :votes
+
+  has_one :role
+  has_one :api_key, dependent: :destroy
 
   # ================ENUMS=====================
   enum gender: %w[male female other]

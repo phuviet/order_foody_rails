@@ -3,7 +3,7 @@ class ApplicationRecord < ActiveRecord::Base
 
   def valid!
     return if valid?
-    raise BadRequestError.new(fetch_messages)
+    raise BadRequestError, fetch_messages
   end
 
   def fetch_messages
