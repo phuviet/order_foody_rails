@@ -9,13 +9,15 @@ class OrderOperations::Create < ApplicationOperation
       create_order!
       create_order_items!
     end
+    send_email
     order
   end
 
   private
 
     def create_order!
-      @order = Order.new(order_params.merge(user_id: actor.id, status: 0))
+      status = params[:status] ? params[:status].to_i : 0
+      @order = Order.new(order_params.merge(user_id: actor.id, status: status))
       @order.valid!
       @order.tap(&:save)
     end
@@ -27,5 +29,9 @@ class OrderOperations::Create < ApplicationOperation
         total    = product.price * quantity
         order.order_items.create!(product_id: product.id, quantity: quantity, total_price: total)
       end
+    end
+
+    def send_email
+      OrderMailer.mail_order(order).deliver_later(wait: 5.seconds)
     end
 end

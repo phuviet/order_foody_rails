@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <%= render 'shared/sample' unless Rails.env.production? %>
     <%= yield %>
   </body>
 </html>
