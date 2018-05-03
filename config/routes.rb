@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     resources :profile, only: %i[index update] do
       resource :password, only: :update, controller: 'profile/password'
     end
+    scope module: :users, path: :users do
+      resources :register, only: :create
+    end
     resources :orders, only: %i[create index show]
     resources :system_config, only: :index
     resources :votes, only: :create
