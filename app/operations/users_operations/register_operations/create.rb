@@ -1,12 +1,12 @@
 class UsersOperations::RegisterOperations::Create < ApplicationOperation
-
   include Users::Parameter
 
   attr_reader :user
 
   def call
     create_user!
-    # send_email
+    send_email
+    user
   end
 
   private
@@ -18,6 +18,6 @@ class UsersOperations::RegisterOperations::Create < ApplicationOperation
     end
 
     def send_email
-      UserMailer.mail_order(order).deliver_later(wait: 5.seconds)
+      UserMailer.register(user).deliver_later(wait: 5.seconds)
     end
 end

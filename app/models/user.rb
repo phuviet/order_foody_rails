@@ -26,6 +26,7 @@
 #
 
 class User < ApplicationRecord
+  has_secure_token :confirm_token
   has_secure_password
   has_paper_trail
   acts_as_paranoid
@@ -52,7 +53,8 @@ class User < ApplicationRecord
   validates :email, format: { with: /\w+@\w+\.{1}[a-zA-Z]{2,}/ }
   validates :phone, format: { with: /(09+([0-9]{8})|01+([0-9]{9}))/ }, if: -> { phone.present? }
   validates_date :birthday, before: -> { 18.years.ago },
-                            before_message: I18n.t('user.must_be_greater_than_18'), if: -> { birthday.present? }
+                            before_message: I18n.t('user.must_be_greater_than_18'),
+                            if: -> { birthday.present? }
 
   # ==============Attr-Accessor===============
   attr_accessor :skip_password_validation

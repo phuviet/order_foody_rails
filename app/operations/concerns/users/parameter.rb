@@ -9,4 +9,9 @@ module Users::Parameter
   def user_register_params
     params.permit(:email, :password, :password_confirmation)
   end
+
+  def user_confirm_params
+    params.permit(:first_name, :last_name, :middle_name, :phone, :address, :gender,
+                  :birthday, :avatar)
+  end
 end

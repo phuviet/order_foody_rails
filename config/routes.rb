@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     end
     scope module: :users, path: :users do
       resources :register, only: :create
+      resource :confirm, only: :update, controller: 'confirm'
     end
     resources :orders, only: %i[create index show]
     resources :system_config, only: :index
