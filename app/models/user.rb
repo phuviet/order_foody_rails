@@ -58,7 +58,7 @@ class User < ApplicationRecord
   attr_accessor :skip_password_validation
 
   # ===============Scope======================
-  scope :incudes_order, -> { inlcudes(:orders) }
+  scope :incudes_order, -> { includes(orders: [order_items: :product]) }
 
   # format name of user follow company format name (example: Huy Dinh Q.)
   def format_fullname

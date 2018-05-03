@@ -7,7 +7,7 @@ class Profiles::IndexSerializer < ApplicationSerializer
 
   def orders
     ActiveModelSerializers::SerializableResource.new(
-      object.orders, each_serializer: Orders::MetaSerializer
+      object.orders, each_serializer: Orders::ShowSerializer
     )
   end
 end
