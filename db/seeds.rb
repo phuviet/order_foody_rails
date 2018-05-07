@@ -65,7 +65,7 @@ images = [
   'yyyqqrmrh1bszk0duwwl.png'
 ]
 
-status = %w[saved ordered paid shipped completed declined]
+status = %w[ordered paid shipped completed declined]
 
 # Create! hop detail
 STDOUT.puts 'Create! shop detail'
