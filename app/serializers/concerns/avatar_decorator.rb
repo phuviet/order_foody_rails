@@ -1,5 +1,7 @@
 module AvatarDecorator
   def avatar
-    object.avatar.url
+    path = object.avatar.url.split('/')
+    path.shift(2)
+    path.join('/')
   end
 end
