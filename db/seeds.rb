@@ -67,11 +67,14 @@ images = [
 
 status = %w[saved ordered paid shipped completed declined]
 
-# Create! shop detail
+# Create! hop detail
 STDOUT.puts 'Create! shop detail'
-ShopDetail.create!(key: 'shop_name', value: 'Super Foody')
-ShopDetail.create!(key: 'phone_number', value: '113')
+ShopDetail.create!(key: 'shop_name', value: 'Order Foody')
+ShopDetail.create!(key: 'phone_number', value: '0935 815 255')
 ShopDetail.create!(key: 'address', value: '193 Nguyen Luong Bang')
+ShopDetail.create!(key: 'email', value: 'order.foody@gmail.com')
+ShopDetail.create!(key: 'latitude', value: '16.0732936')
+ShopDetail.create!(key: 'longitude', value: '108.1690887')
 STDOUT.puts '----------------------------------------------------'
 
 # Create! roles

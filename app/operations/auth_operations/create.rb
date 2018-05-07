@@ -29,6 +29,7 @@ class AuthOperations::Create < ApplicationOperation
       unless actor && password_verify?
         raise BadRequestError, email_password: I18n.t('authorized.login_failure')
       end
+      raise BadRequestError, confirm_at: I18n.t('errors.messages.blank') if @actor.confirm_at.blank?
     end
 
     def password_verify?

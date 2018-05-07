@@ -11,7 +11,6 @@ module Users::Parameter
   end
 
   def user_confirm_params
-    params.permit(:first_name, :last_name, :middle_name, :phone, :address, :gender,
-                  :birthday, :avatar)
+    params.permit(:first_name, :last_name, :middle_name, :phone, :address, :gender)
   end
 end

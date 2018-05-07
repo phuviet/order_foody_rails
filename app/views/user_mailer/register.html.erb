@@ -3,5 +3,6 @@ Hi,<br>
 Thanks for registering! <br>
 <br>
 Please expropriate imformation in the URL below. <br>
-
-<i><strong><%= @url %></strong></i>
+<% if @url.present? %>
+  <strong><%= link_to "Click here!", @url %></strong>
+<% end %>
