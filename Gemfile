@@ -71,7 +71,7 @@ group :development, :test do
 
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'rubocop', require: false
+  gem 'rubocop', '0.49.1', require: false, groups: %i[development test]
 end
 
 group :development do

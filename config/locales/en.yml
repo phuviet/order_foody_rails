@@ -114,6 +114,7 @@ en:
     logout_failure: logout_failure
     logout_success: logout_success
     unauthorized: unauthorized
+    is_lock: is_lock
   # positions:
   #   invalid_parent: "Parent id doesn't exists in this level"
   # articles:

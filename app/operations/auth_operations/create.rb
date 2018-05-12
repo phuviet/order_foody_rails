@@ -12,6 +12,7 @@ class AuthOperations::Create < ApplicationOperation
   end
 
   def call
+    lock!
     valid_user_login!
     @access_token = generate_access_token(actor)
     ActiveRecord::Base.transaction do
@@ -21,6 +22,10 @@ class AuthOperations::Create < ApplicationOperation
   end
 
   private
+
+    def lock!
+      raise BadRequestError, email: I18n.t('authorized.is_lock') unless actor.lock.zero?
+    end
 
     def valid_user_login!
       raise BadRequestError, email: I18n.t('errors.messages.blank') if params[:email].blank?
