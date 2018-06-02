@@ -6,5 +6,5 @@ class ProductWatched < ApplicationRecord
   has_one :order
   has_one :product
 
-  scope :common_order, -> { :create_at }
+  scope :common_order, -> { order(:created_at) }
 end

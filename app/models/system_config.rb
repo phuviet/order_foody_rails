@@ -1,5 +1,5 @@
 class SystemConfig < ApplicationRecord
-  TOP_NEWS       = 10
+  TOP_NEWS       = 9
   TOP_SELLERS    = 4
   POINTER_NEW    = 2
   POINTER_SELLER = 2

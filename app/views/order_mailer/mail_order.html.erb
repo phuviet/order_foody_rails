@@ -1,32 +1,32 @@
-<table>
+<table class="table table-striped">
   <caption>Information Order</caption>
   <thead>
     <tr>
-      <th>Receiver Name</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>Status</th>
+      <th width="20%">Receiver Name</th>
+      <th width="55%">Address</th>
+      <th width="15%">Phone</th>
+      <th width="10%">Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><%= @order.receiver %></td>
-      <td><%= @order.address %></td>
-      <td><%= @order.phone %></td>
-      <td><%= @order.status %></td>
+      <td width="20%"><%= @order.receiver %></td>
+      <td width="55%"><%= @order.address %></td>
+      <td width="15%"><%= @order.phone %></td>
+      <td width="10%"><%= @order.status %></td>
     </tr>
   </tbody>
 </table>
-
+<div style="margin-bottom: 30px"></div>
 <table>
   <caption>Products</caption>
   <thead>
     <tr>
-      <th>No.</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Total</th>
+      <th width="10%" style="text-align: center">No.</th>
+      <th width="30%" style="text-align: center">Name</th>
+      <th width="10%" style="text-align: center">Price</th>
+      <th width="20%" style="text-align: center">Quantity</th>
+      <th width="20%" style="text-align: center">Total</th>
     </tr>
   </thead>
   <tbody>
@@ -34,11 +34,11 @@
     <% for i in 0...@order_items.size do %>
     <% product = @order_items[i].product %>
     <tr>
-      <td><%= i + 1 %></td>
-      <td><%= product.name %></td>
-      <td><%= product.price %></td>
-      <td><%= @order_items[i].quantity %></td>
-      <td><%= @order_items[i].total_price %></td>
+      <td width="10%" style="text-align: center"><%= i + 1 %></td>
+      <td width="30%" style="text-align: center"><%= product.name %></td>
+      <td width="10%" style="text-align: center"><%= product.price %></td>
+      <td width="20%" style="text-align: center"><%= @order_items[i].quantity %></td>
+      <td width="20%" style="text-align: center"><%= @order_items[i].total_price %></td>
       <% total += @order_items[i].total_price.to_f %>
     </tr>
     <% end %>

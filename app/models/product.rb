@@ -28,6 +28,7 @@ class Product < ApplicationRecord
   has_many :parent_comments, -> { where(parent_id: nil) }, class_name: Comment.name
   has_many :votes, dependent: :destroy
   has_many :products_images, dependent: :destroy
+  has_many :product_watcheds, dependent: :destroy
 
   # ================Validates=====================
   validates :category_id, presence: true
@@ -37,7 +38,8 @@ class Product < ApplicationRecord
   scope :common_order, -> { order(:name) }
   scope :top_newest, -> { order(created_at: :desc).limit(SystemConfig.top_newest.value) }
   scope :top_seller, -> {
-    joins(:order_items).group('products.id').order('SUM(order_items.quantity) DESC')
+    joins(order_items: :order).where(orders: {status: 4})
+                       .group('products.id').order('SUM(order_items.quantity) DESC')
                        .limit(SystemConfig.top_sellers .value)
   }
   scope :includes_details, -> {

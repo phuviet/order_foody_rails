@@ -24,9 +24,9 @@ class OrderOperations::Create < ApplicationOperation
 
     def create_order_items!
       params[:cart].each do |cart|
-        product  = load_product!(cart[:product_id])
+        product  = load_product!(cart[:id])
         quantity = cart[:quantity]
-        total    = product.price * quantity
+        total    = product.price * quantity.to_i
         order.order_items.create!(product_id: product.id, quantity: quantity, total_price: total)
       end
     end
